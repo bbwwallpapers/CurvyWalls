@@ -6,38 +6,61 @@
     <meta name="description" content="Curvy Walls - NSFW wallpapers of big beautiful women">
     <title>Curvy Walls - BBW Wallpapers</title>
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        background-color: #f3f3f3;
-    }
-    .container {
-        text-align: center;
-    }
-    h1 {
-        color: #333;
-    }
-    p {
-        color: #666;
-    }
-
-    /* Add new CSS here for the wallpaper grid */
-    .wallpaper-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
-        margin-top: 20px;
-    }
-    .wallpaper img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-</style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+            background-color: #f3f3f3;
+        }
+        .container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .wallpaper-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .wallpaper img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .link-input {
+            margin-top: 30px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -45,20 +68,15 @@
         <p>Explore a collection of beautiful BBW wallpapers, featuring curves and boldness.</p>
 
         <!-- Wallpaper Grid -->
-        <div class="wallpaper-grid">
-            <!-- Placeholder images for now -->
-            <div class="wallpaper"><img src="https://via.placeholder.com/200" alt="Wallpaper 1"></div>
-            <div class="wallpaper"><img src="https://via.placeholder.com/200" alt="Wallpaper 2"></div>
-            <div class="wallpaper"><img src="https://via.placeholder.com/200" alt="Wallpaper 3"></div>
-            <div class="wallpaper"><img src="https://via.placeholder.com/200" alt="Wallpaper 4"></div>
-            <div class="wallpaper"><img src="https://via.placeholder.com/200" alt="Wallpaper 5"></div>
-            <div class="wallpaper"><img src="https://via.placeholder.com/200" alt="Wallpaper 6"></div>
+        <div id="gallery" class="wallpaper-grid"></div>
+
+        <!-- Form to Add External Image Links -->
+        <div class="link-input">
+            <input type="text" id="imageUrl" placeholder="Add image URL here" />
+            <button onclick="addExternalImage()">Add Image</button>
         </div>
     </div>
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"></script>
-<script src="firebase.js"></script>  <!-- Link to firebase.js -->
+
+    <script src="script.js"></script>
 </body>
 </html>
