@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // List of images hosted locally on your GitHub repository
     const localImages = [
-        'peakpx.jpg',
+        'images/peakpx.jpg',
         'image2.jpg',
         'image3.jpg'
     ];
